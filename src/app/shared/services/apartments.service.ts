@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { BehaviorSubject, map, Observable } from 'rxjs';
+import { BehaviorSubject, map, distinct, Observable, mergeMap, toArray } from 'rxjs';
 import { Apartment } from '../models/apartment';
 
 @Injectable({
@@ -13,6 +13,11 @@ export class ApartmentsService {
   private _list$: BehaviorSubject<Apartment[]> = new BehaviorSubject<Apartment[]>([]);
   public get list$(): Observable<Apartment[]> {
     return this._list$ as Observable<Apartment[]>;
+  }
+  public get years$(): Observable<number[]> {
+    return this._list$.pipe(
+      map(apartments => Array.from(new Set(apartments.map(apartment => apartment.year))))
+    );
   }
 
   constructor() {
