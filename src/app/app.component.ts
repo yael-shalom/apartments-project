@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { ApartmentsTableComponent } from "./shared/components/apartments-table/apartments-table.component";
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [ApartmentsTableComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
 }
