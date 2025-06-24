@@ -10,7 +10,7 @@ import { SelectModule } from 'primeng/select';
 import { Table, TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { Apartment } from '../../models/apartment';
-import { ApartmentFields } from '../../../models/apartment-fields';
+import { ApartmentFields } from '../../models/apartment-fields';
 
 @Component({
   selector: 'app-apartments-table',
