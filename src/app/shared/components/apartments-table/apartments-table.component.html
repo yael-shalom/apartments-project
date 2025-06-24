@@ -16,14 +16,14 @@
         </ng-template>
         <ng-template #header>
             <tr>
-                <th style="width:12%">{{ apartmentFieldsLabels._id }}</th>
-                <th style="width:22%">{{ apartmentFieldsLabels.Lamas_name }}</th>
-                <th style="width:12%">{{ apartmentFieldsLabels.Lamas_code }}</th>
-                <th style="width:12%">{{ apartmentFieldsLabels.year }}</th>
-                <th style="width:12%">{{ apartmentFieldsLabels['3 rooms apartments'] }}</th>
-                <th style="width:12%">{{ apartmentFieldsLabels['average price (NIS) 3 rooms apartments'] }}</th>
-                <th style="width:12%">{{ apartmentFieldsLabels['4+ rooms apartments'] }}</th>
-                <th style="width:12%">{{ apartmentFieldsLabels['average price (NIS) 4+ rooms apartments'] }}</th>
+                <th>{{ apartmentFieldsLabels._id }}</th>
+                <th>{{ apartmentFieldsLabels.Lamas_name }}</th>
+                <th>{{ apartmentFieldsLabels.Lamas_code }}</th>
+                <th>{{ apartmentFieldsLabels.year }}</th>
+                <th>{{ apartmentFieldsLabels['3 rooms apartments'] }}</th>
+                <th>{{ apartmentFieldsLabels['average price (NIS) 3 rooms apartments'] }}</th>
+                <th>{{ apartmentFieldsLabels['4+ rooms apartments'] }}</th>
+                <th>{{ apartmentFieldsLabels['average price (NIS) 4+ rooms apartments'] }}</th>
             </tr>
             <tr>
                 <th>
@@ -35,30 +35,31 @@
                         [ariaLabel]="'סינון לפי ' + apartmentFieldsLabels.Lamas_name"></p-columnFilter>
                 </th>
                 <th>
-                    <p-columnFilter type="text" field="Lamas_code" [placeholder]="apartmentFieldsLabels.Lamas_code"
+                    <p-columnFilter type="numeric" field="Lamas_code" [placeholder]="apartmentFieldsLabels.Lamas_code"
                         [ariaLabel]="'סינון לפי ' + apartmentFieldsLabels.Lamas_code"></p-columnFilter>
                 </th>
                 <th>
-                    <p-columnFilter type="text" field="year" [placeholder]="apartmentFieldsLabels.year"
+                    <p-columnFilter type="numeric" field="year" [placeholder]="apartmentFieldsLabels.year"
                         [ariaLabel]="'סינון לפי ' + apartmentFieldsLabels.year"></p-columnFilter>
                 </th>
                 <th>
-                    <p-columnFilter type="text" field="3 rooms apartments" [placeholder]="apartmentFieldsLabels['3 rooms apartments']"
+                    <p-columnFilter type="numeric" field="3 rooms apartments" [placeholder]="apartmentFieldsLabels['3 rooms apartments']"
                         [ariaLabel]="'סינון לפי ' + apartmentFieldsLabels['3 rooms apartments']"></p-columnFilter>
                 </th>
                 <th>
-                    <p-columnFilter type="text" field="average price (NIS) 3 rooms apartments"
+                    <p-columnFilter type="numeric" field="average price (NIS) 3 rooms apartments"
                         [placeholder]="apartmentFieldsLabels['average price (NIS) 3 rooms apartments']"
                         [ariaLabel]="'סינון לפי ' + apartmentFieldsLabels['average price (NIS) 3 rooms apartments']"></p-columnFilter>
                 </th>
                 <th>
-                    <p-columnFilter type="text" field="4+ rooms apartments" [placeholder]="apartmentFieldsLabels['4+ rooms apartments']"
+                    <p-columnFilter type="numeric" field="4+ rooms apartments" [placeholder]="apartmentFieldsLabels['4+ rooms apartments']"
                         [ariaLabel]="'סינון לפי ' + apartmentFieldsLabels['4+ rooms apartments']"></p-columnFilter>
                 </th>
                 <th>
-                    <p-columnFilter type="text" field="average price (NIS) 4+ rooms apartments"
+                    <p-columnFilter type="numeric" field="average price (NIS) 4+ rooms apartments"
                         [placeholder]="apartmentFieldsLabels['average price (NIS) 4+ rooms apartments']"
-                        [ariaLabel]="'סינון לפי ' + apartmentFieldsLabels['average price (NIS) 4+ rooms apartments']"></p-columnFilter>
+                        [ariaLabel]="'סינון לפי ' + apartmentFieldsLabels['average price (NIS) 4+ rooms apartments']">
+                    </p-columnFilter>
                 </th>
             </tr>
         </ng-template>
