@@ -1,7 +1,6 @@
 export enum ApartmentFields {
     _id = '#',
-    Lamas_name = 'שם למ"ס',
-    Lamas_code = 'קוד למ"ס',
+    Lamas_name = 'עיר',
     year = 'שנה',
     '3 rooms apartments' = 'דירות 3 חדרים',
     'average price (NIS) 3 rooms apartments' = 'מחיר ממוצע (ש"ח) דירות 3 חדרים',

@@ -2,7 +2,7 @@
 <div class="card">
     <p-table #dt [value]="(apartmentsList$ | async) ?? []" dataKey="_id" [rows]="10" [rowsPerPageOptions]="[5, 10, 25]"
         [paginator]="true"
-        [globalFilterFields]="['_id', 'Lamas_name', 'Lamas_code', 'year', '3 rooms apartments', 'average price (NIS) 3 rooms apartments', '4+ rooms apartments', 'average price (NIS) 4+ rooms apartments']"
+        [globalFilterFields]="['_id', 'Lamas_name', 'year', '3 rooms apartments', 'average price (NIS) 3 rooms apartments', '4+ rooms apartments', 'average price (NIS) 4+ rooms apartments']"
         [tableStyle]="{ 'min-width': '75rem' }">
         <ng-template #caption>
             <div class="flex">
@@ -10,7 +10,7 @@
                     <p-inputicon>
                         <i class="pi pi-search"></i>
                     </p-inputicon>
-                    <input pInputText type="text" (input)="onSearch($event)" placeholder="Search keyword" />
+                    <input pInputText type="text" (input)="onSearch($event)" placeholder="חיפוש..." />
                 </p-iconfield>
             </div>
         </ng-template>
@@ -18,7 +18,6 @@
             <tr>
                 <th>{{ apartmentFieldsLabels._id }}</th>
                 <th>{{ apartmentFieldsLabels.Lamas_name }}</th>
-                <th>{{ apartmentFieldsLabels.Lamas_code }}</th>
                 <th>{{ apartmentFieldsLabels.year }}</th>
                 <th>{{ apartmentFieldsLabels['3 rooms apartments'] }}</th>
                 <th>{{ apartmentFieldsLabels['average price (NIS) 3 rooms apartments'] }}</th>
@@ -33,10 +32,6 @@
                 <th>
                     <p-columnFilter type="text" field="Lamas_name" [placeholder]="apartmentFieldsLabels.Lamas_name"
                         [ariaLabel]="'סינון לפי ' + apartmentFieldsLabels.Lamas_name"></p-columnFilter>
-                </th>
-                <th>
-                    <p-columnFilter type="numeric" field="Lamas_code" [placeholder]="apartmentFieldsLabels.Lamas_code"
-                        [ariaLabel]="'סינון לפי ' + apartmentFieldsLabels.Lamas_code"></p-columnFilter>
                 </th>
                 <th>
                     <p-columnFilter type="numeric" field="year" [placeholder]="apartmentFieldsLabels.year"
@@ -67,7 +62,6 @@
             <tr>
                 <td>{{ apartment._id }}</td>
                 <td>{{ apartment.Lamas_name }}</td>
-                <td>{{ apartment.Lamas_code }}</td>
                 <td>{{ apartment.year }}</td>
                 <td>{{ apartment['3 rooms apartments'] }}</td>
                 <td>{{ apartment['average price (NIS) 3 rooms apartments'] }}</td>
