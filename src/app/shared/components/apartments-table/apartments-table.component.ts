@@ -10,6 +10,7 @@ import { SelectModule } from 'primeng/select';
 import { Table, TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { Apartment } from '../../models/apartment';
+import { ApartmentFields } from '../../../models/apartment-fields';
 
 @Component({
   selector: 'app-apartments-table',
@@ -20,6 +21,8 @@ import { Apartment } from '../../models/apartment';
 })
 export class ApartmentsTableComponent {
   table = viewChild<Table<Apartment>>('dt');
+
+  apartmentFieldsLabels = ApartmentFields;
 
   apartmentsList$ = inject(ApartmentsService).list$;
 
