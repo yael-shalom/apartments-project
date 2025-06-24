@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ApartmentsTableComponent } from "./shared/components/apartments-table/apartments-table.component";
+import { ApartmentsTableComponent } from "./components/apartments-table/apartments-table.component";
 
 @Component({
   selector: 'app-root',
