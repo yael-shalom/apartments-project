@@ -8,7 +8,6 @@ import { InputTextModule } from 'primeng/inputtext';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { SelectModule } from 'primeng/select';
 import { Table, TableModule } from 'primeng/table';
-import { ProgressBar } from 'primeng/progressbar';
 import { ButtonModule } from 'primeng/button';
 import { Apartment } from '../../models/apartment';
 
