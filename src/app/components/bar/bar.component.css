@@ -1,0 +1,4 @@
+::ng-deep canvas {
+    height: 500px !important;
+    margin: auto;
+}
