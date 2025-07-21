@@ -47,11 +47,6 @@ export class BarComponent implements OnInit {
   }
 
   themeEffect = effect(() => {
-    // if (this.configService.transitionComplete()) {
-    //     if (this.designerService.preset()) {
-    //         this.initChart();
-    //     }
-    // }
   });
 
   ngOnInit() {

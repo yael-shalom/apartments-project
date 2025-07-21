@@ -1,0 +1,9 @@
+h1 {
+    text-align: center;
+}
+
+th,
+td,
+tr {
+    width: 100px !important;
+}

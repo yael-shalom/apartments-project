@@ -1,8 +1,9 @@
 @if (apartmentsList$) {
+    <h1>נתוני הדירות</h1>
 <div class="card">
     <p-table #dt [value]="(apartmentsList$ | async) ?? []" dataKey="_id" [rows]="10" [rowsPerPageOptions]="[5, 10, 25]"
         [paginator]="true"
-        [globalFilterFields]="['_id', 'Lamas_name', 'year', '3 rooms apartments', 'average price (NIS) 3 rooms apartments', '4+ rooms apartments', 'average price (NIS) 4+ rooms apartments']"
+        [globalFilterFields]="['Lamas_name', 'year', '3 rooms apartments', 'average price (NIS) 3 rooms apartments', '4+ rooms apartments', 'average price (NIS) 4+ rooms apartments']"
         [tableStyle]="{ 'min-width': '75rem' }">
         <ng-template #caption>
             <div class="flex">
@@ -16,7 +17,7 @@
         </ng-template>
         <ng-template #header>
             <tr>
-                <th>{{ apartmentFieldsLabels._id }}</th>
+                <!-- <th>{{ apartmentFieldsLabels._id }}</th> -->
                 <th>{{ apartmentFieldsLabels.Lamas_name }}</th>
                 <th>{{ apartmentFieldsLabels.year }}</th>
                 <th>{{ apartmentFieldsLabels['3 rooms apartments'] }}</th>
@@ -25,10 +26,10 @@
                 <th>{{ apartmentFieldsLabels['average price (NIS) 4+ rooms apartments'] }}</th>
             </tr>
             <tr>
-                <th>
+                <!-- <th>
                     <p-columnFilter type="text" field="_id" [placeholder]="apartmentFieldsLabels._id"
                         [ariaLabel]="'סינון לפי ' + apartmentFieldsLabels._id"></p-columnFilter>
-                </th>
+                </th> -->
                 <th>
                     <p-columnFilter type="text" field="Lamas_name" [placeholder]="apartmentFieldsLabels.Lamas_name"
                         [ariaLabel]="'סינון לפי ' + apartmentFieldsLabels.Lamas_name"></p-columnFilter>
@@ -60,7 +61,7 @@
         </ng-template>
         <ng-template #body let-apartment>
             <tr>
-                <td>{{ apartment._id }}</td>
+                <!-- <td>{{ apartment._id }}</td> -->
                 <td>{{ apartment.Lamas_name }}</td>
                 <td>{{ apartment.year }}</td>
                 <td>{{ apartment['3 rooms apartments'] }}</td>

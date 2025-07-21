@@ -48,16 +48,16 @@ export class PieBarComponent {
       const textColor = documentStyle.getPropertyValue('--text-color');
       // Generate a unique color for each label
       const baseColors = [
-        '--p-cyan-500',
-        '--p-orange-500',
-        '--p-gray-500',
-        '--p-blue-500',
-        '--p-green-500',
-        '--p-yellow-500',
-        '--p-purple-500',
-        '--p-pink-500',
-        '--p-teal-500',
-        '--p-red-500'
+        '--p-cyan-300',
+        '--p-orange-300',
+        '--p-gray-300',
+        '--p-blue-300',
+        '--p-green-300',
+        '--p-yellow-300',
+        '--p-purple-300',
+        '--p-pink-300',
+        '--p-teal-300',
+        '--p-red-300'
       ];
       const baseHoverColors = [
         '--p-cyan-400',

@@ -5,27 +5,30 @@
   top: 100px;
 }
 .nav-buttons {
-  margin-top: 40px;
+  margin-top: 150px;
   display: flex;
   justify-content: center;
   gap: 40px;
 }
 .nav-btn {
-  background: #1976d2;
-  color: #fff;
+  background: rgba(6, 75, 212, 0.2);
+  border: 1px solid rgb(6, 75, 212);
+  color: rgb(6, 75, 212);
   padding: 18px 36px;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   transition: 0.2s;
   cursor: pointer;
+  height: 200px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
 }
 .nav-btn:hover {
-  background: #125ea2;
-}
-
-h1 {
-    margin: 0;
+  background: rgba(6, 75, 212, 0.3);
 }
 
 .container {
@@ -35,4 +38,5 @@ h1 {
   width: 100%;
   background-image: url('../../../public/building.jpg');
   opacity: 0.5;
+  top: 0;
 }

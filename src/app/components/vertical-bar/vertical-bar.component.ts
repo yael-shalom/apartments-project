@@ -33,7 +33,7 @@ export class VerticalBarComponent implements OnInit {
 		this.apartmentsList$.subscribe(lst => {
 			this.years = [...new Set(lst.map(apartment => apartment.year))].sort((a, b) => a - b);
 
-			
+
 			this.fourCount = lst.reduce((dict: any, current) => {
 				if (!dict[current.year]) {
 					dict[current.year] = 0;
@@ -41,7 +41,7 @@ export class VerticalBarComponent implements OnInit {
 				dict[current.year] += current['4+ rooms apartments'];
 				return dict;
 			}, {});
-			
+
 			this.threeCount = lst.reduce((dict: any, current) => {
 				if (!dict[current.year]) {
 					dict[current.year] = 0;
@@ -54,7 +54,7 @@ export class VerticalBarComponent implements OnInit {
 			console.log(this.fourCount)
 			console.log(this.threeCount);
 			console.log(this.years);
-			
+
 
 			this.initChart();
 		});
@@ -89,15 +89,17 @@ export class VerticalBarComponent implements OnInit {
 				datasets: [
 					{
 						label: '3 Rooms',
-						backgroundColor: documentStyle.getPropertyValue('--p-cyan-500'),
-						borderColor: documentStyle.getPropertyValue('--p-cyan-500'),
-						data: Object.values(this.threeCount)
+						backgroundColor: 'rgba(6, 182, 212, 0.2)', // צבע תכלת בהיר
+						borderColor: 'rgb(6, 182, 212)', // צבע תכלת כהה יותר
+						data: Object.values(this.threeCount),
+						borderWidth: 1
 					},
 					{
 						label: '4+ Rooms',
-						backgroundColor: documentStyle.getPropertyValue('--p-gray-500'),
-						borderColor: documentStyle.getPropertyValue('--p-gray-500'),
-						data: Object.values(this.fourCount)
+						backgroundColor: 'rgba(139, 92, 246, 0.2)',
+						borderColor: 'rgb(139, 92, 246)',
+						data: Object.values(this.fourCount),
+						borderWidth: 1
 					}
 				]
 			};
