@@ -1,0 +1,10 @@
+<h1>בחר גרף להצגה</h1>
+<div class="graph-buttons">
+    <button (click)="showGraph('vertical-bar')">Vertical Bar</button>
+    <button (click)="showGraph('bar')">Bar</button>
+    <button (click)="showGraph('pie-bar')">Pie Bar</button>
+</div>
+
+<app-vertical-bar *ngIf="currentGraph === 'vertical-bar'"></app-vertical-bar>
+<app-bar *ngIf="currentGraph === 'bar'"></app-bar>
+<app-pie-bar *ngIf="currentGraph === 'pie-bar'"></app-pie-bar>

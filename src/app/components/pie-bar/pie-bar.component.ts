@@ -23,9 +23,6 @@ export class PieBarComponent {
 
   amount: any;
 
-
-  // designerService = inject(DesignerService);
-
   constructor() {
     this.apartmentsList$.subscribe(lst => {
       this.labels = [...new Set(lst.map(apartment => apartment.year.toString()))].sort((a, b) => a.localeCompare(b));
@@ -43,11 +40,6 @@ export class PieBarComponent {
   }
 
   themeEffect = effect(() => {
-    // if (this.configService.transitionComplete()) {
-    //     if (this.designerService.preset()) {
-    //         this.initChart();
-    //     }
-    // }
   });
 
   initChart() {
@@ -98,7 +90,6 @@ export class PieBarComponent {
         ]
       };
       this.options = {
-        // maintainAspectRatio: false,
         plugins: {
           legend: {
             labels: {

@@ -1,0 +1,8 @@
+.card {
+    width: 70%;
+    margin: auto;
+}
+
+::ng-deep canvas {
+    height: 500px !important;
+}

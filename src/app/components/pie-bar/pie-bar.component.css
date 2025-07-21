@@ -1,3 +1,9 @@
 ::ng-deep canvas {
     height: 500px !important;
 }
+
+.card {
+    display: flex; /* מוודא שהאלמנט הוא מסוג flex */
+    justify-content: center; /* מיישר את התוכן לאמצע */
+    align-items: center; /* מיישר את התוכן במרכז גם בציר ה-Y */
+}
