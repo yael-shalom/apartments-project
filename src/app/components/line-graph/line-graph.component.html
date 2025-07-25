@@ -1,0 +1,10 @@
+<div class="line-graph-wrapper" dir="rtl">
+  <!-- No selectors here, handled in graphs -->
+  <div *ngIf="!selectedX || !selectedY" class="empty-chart-message">
+    בחר נתון לציר X ונתון מספרי לציר Y
+  </div>
+  <div *ngIf="selectedX && selectedY && !data" style="color:red;text-align:center;margin-top:20px;">
+    לא נמצאו נתונים להצגה עבור הבחירה שלך
+  </div>
+  <p-chart *ngIf="selectedX && selectedY && data" type="line" [data]="data" [options]="options" class="line-chart" style="width:80%;margin:auto;"></p-chart>
+</div>
